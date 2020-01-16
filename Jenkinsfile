@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    agent { image 'node:7-alpine' }
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
-                echo 'Building...'
+                sh 'node --version'
             }
         }
     }
